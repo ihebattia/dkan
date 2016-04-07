@@ -66,6 +66,7 @@ dependencies:
 test:
   override:
     - bash dkan/test/circle-behat.sh docroot/profiles/dkan/test/features:
+        timeout: 900
         parallel: true
   post:
     - echo $CIRCLE_ARTIFACTS; cp -av dkan/test/assets $CIRCLE_ARTIFACTS:
